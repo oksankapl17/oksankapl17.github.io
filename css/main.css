@@ -67,6 +67,7 @@ h6 {
 
 .scroll-to-top:focus, .scroll-to-top:hover {
     color: white;
+    text-decoration: none;
 }
 
 .scroll-to-top:hover {
