@@ -91,10 +91,14 @@ h6 {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    max-height: 600px;
 }
 
 .header .text-wrapper {
-    padding: 1em 2em;
+ 
+    margin-left: auto;
+    padding: 0 1em 2em;
+    margin-right: 0;
 }
 
 .header h1 {
@@ -124,8 +128,8 @@ h6 {
     }
 
     .header .text-wrapper {
-        padding: 0 4em 2em;
-        max-width: 55%;
+        padding: 0 0 2em;
+        max-width: 45%;
     }
 }
 
