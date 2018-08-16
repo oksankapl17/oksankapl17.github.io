@@ -92,10 +92,15 @@ h6 {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    max-height: 600px;
 }
 
 
 .header .text-wrapper {
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> 847cb9e14402fa8bcc3f306acd6972dc0b330452
     margin-left: auto;
     padding: 0 1em 2em;
     margin-right: 0;
@@ -130,7 +135,11 @@ h6 {
     }
 
     .header .text-wrapper {
+<<<<<<< HEAD
         padding: 0;
+=======
+        padding: 0 0 2em;
+>>>>>>> 847cb9e14402fa8bcc3f306acd6972dc0b330452
         max-width: 45%;
     }
 }
