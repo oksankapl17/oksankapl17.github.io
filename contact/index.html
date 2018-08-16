@@ -9,22 +9,22 @@
   <meta name="author" content="">
 
   <title>My Site</title>
-  <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-  <link rel="manifest" href="icons/manifest.json">
+  <link rel="apple-touch-icon" sizes="57x57" href="../icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
+  <link rel="manifest" href="../icons/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+  <meta name="msapplication-TileImage" content="../icons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
   <!-- Bootstrap Core CSS -->
@@ -42,7 +42,7 @@
 <body id="page-top">
 
   <!-- Navigation -->
-  <nav id="navbar-wrapper" class="navbar navbar-expand-lg sticky-top navbar-light bg-light justify-content-between">
+  <nav id="navbar-wrapper" class="navbar navbar-expand-lg fixed-top navbar-light bg-light justify-content-between">
     <div class="container">
       <a class="navbar-brand" href="#"><img src="../img/logo.png" alt="Лого"/></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,13 +51,13 @@
       <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="navbar-nav-item">
-            <a class="js-scroll-trigger" href="#page-top">Головна</a>
+            <a class="js-scroll-trigger" href="/">Головна</a>
           </li>
           <li class="navbar-nav-item">
-            <a class="js-scroll-trigger" href="#news">Новини</a>
+            <a class="js-scroll-trigger" href="/news">Новини</a>
           </li>
           <li class="navbar-nav-item">
-            <a class="js-scroll-trigger" href="#products">Продукти</a>
+            <a class="js-scroll-trigger" href="/products">Продукти</a>
           </li>
           <li class="navbar-nav-item">
             <a class="js-scroll-trigger" href="/contact">Контакти</a>
@@ -71,10 +71,9 @@
     <div class="container">
       <div class="d-flex flex-column justify-content-center align-items-center text-wrapper text-center my-auto">
         <h1 class="mb-1">Крапля Краси</h1>
-        <h3 class="mb-5">
+        <h3 class="mb-1">
           <em>Краса та здоров'я в кожній краплі</em>
         </h3>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Дізнатися більше</a>
       </div>
     </div>
   </header>
@@ -83,13 +82,18 @@
   <div class="content-section-small bg-light" id="about">
     <div class="container">
       <div class="row">
-        <div class="col-lg-5">
-          <img class="img-fluid" src="../img/leaf.jpg" alt="Листок" />
-        </div>
-        <div class="col-lg-7">
-          <p class="text-justify lead">Сьогодні використання натуральної косметики – це чудовий спосіб зберігати свою красу і здоров'я. У всьому світі тисячі людей відмовляються від переповненої шкідливими хімічними інгредієнтами косметики, віддаючи перевагу органіці.Пропонуємо Вашій
-            увазі натуральну косметику і засоби для волосся і тіла ручної роботи. Усі компоненти, що використовуються при виготовленні косметичних засобів ми замовляємо в провідних виробників з США та Європи. Зокрема, велику кількість інгредієнтів ми
-            замовляємо в Франції (Aroma-zone).</p>
+        <div class="col-12">
+          <img class="img-thumbnail rounded float-left" src="../img/my-photo.jpg" alt="Моє фото" />
+          <p  class="text-justify">
+            Досить довго я користувалась кремами купленими в супермаркеті або косметичних магазинах, а останнім часом і в дрогеріях Польщі. Все сподівалась одержати ефект, заявлений виробниками на упаковках, але його ніяк не було. Мало того, багато грошей було потрачено
+            на підбір косметики саме для своєї шкіри, а результату далі не було видно. Тоді я почала дуже скрупульозно вивчати з чого ж складаються ці самі косметичні засоби. Оскільки за освітою я хімік-фармацевт, то для мене це було дуже цікавим заняттям.
+            І виявилось, що косметика, яку ми купуємо, містить в собі синтетичні компоненти, а натуральних компонентів в найкращому випадку там мізерна кількість, тому що вони мають короткий термін зберігання і коштують зовсім не дешево. Досить того,
+            що ми харчуємось далеко не натуральною їжею, дихаємо забрудненим повітрям, то ще й користуємось невідомо наскільки безпечною косметикою. Тому я вирішила робити натуральну косметику своїми руками. Спочатку це було тільки для себе та сім’ї,
+            потім - для друзів. Оскільки ця косметика майже на 100% складається з натуральних складників, термін ії зберігання біля 3 місяців. Креми не такі гладенькі як промислові, оскільки не містять силіконів. При нанесенні залишається білий слід,
+            що швидко зникає. І ще в цій косметиці відсутній миттєвий ефект, проте при постійному використанні відразу буде помітно довготривалий накопичувальний ефект. Для мене дуже важливою є ефективність та безпечність косметичних засобів. Тому в натуральній
+            косметиці, що я виготовляю містяться: рослинні олії - замість вазеліну, мінеральних олій і силікону; рослинні екстракти і натуральні вітаміни - замість синтетичних вітамінів і антиоксидантів; натуральні гелеутворювачі (ксантанова камідь, гіалуронова
+            кислота) - замість синтетичних згущувачів; натуральні емульгатори (Olivem 1000 та ін.) - замість синтетичних емульгаторів натуральні ароматичні композиції або ефірні олії, активи, глини, порошки рослин і т.д.</p>
+          <h5 class="text-right">З повагою, Оксана Плотнікова</h5>
         </div>
       </div>
     </div>
@@ -115,7 +119,7 @@
           </ul>
         </div>
         <div class="col-lg-6">
-          <form method="POST" action="https://formspree.io/oksankapl17@gmail.com">
+          <form id="contact-form" method="POST" action="https://formspree.io/oksankapl17@gmail.com">
             <div class="form-group">
               <label for="name">Введіть своє ім'я: </label>
               <input id="name" class="form-control" type="text" name="name" placeholder="Ім'я Прізвище" required>
@@ -141,10 +145,10 @@
       <nav>
         <ul class="nav d-flex justify-content-center">
           <li class="navbar-nav-item">
-            <a class="js-scroll-trigger text-white" href="#about">Новини</a>
+            <a class="js-scroll-trigger text-white" href="/new">Новини</a>
           </li>
           <li class="navbar-nav-item">
-            <a class="js-scroll-trigger text-white" href="#products">Продукти</a>
+            <a class="js-scroll-trigger text-white" href="/products">Продукти</a>
           </li>
           <li class="navbar-nav-item">
             <a class="js-scroll-trigger text-white" href="/contact">Контакти</a>
