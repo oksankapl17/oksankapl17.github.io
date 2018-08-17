@@ -1,15 +1,16 @@
 (function($) {
-
+    // WOW.js
+    if (typeof WOW !== "undefined") {
+        new WOW().init();
+    }
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//, '') ==
-            this.pathname.replace(/^\//, '') && location.hostname ==
-            this.hostname) {
+        if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
             let target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 $('html, body').animate({
-                    scrollTop: target.offset().top,
+                    scrollTop: target.offset().top - 50,
                 }, 1000, 'easeInOutExpo');
                 return false;
             }
@@ -26,27 +27,28 @@
             $('.scroll-to-top').fadeOut();
         }
     });
-    
-    
-  // Activate scrollspy to add active class to navbar items on scroll
-  $('body').scrollspy({
-    target: '#navbar-wrapper',
-    offset: 80
-  });
 
-  // Collapse Navbar
-  const navbarCollapse = () => {
-    if ($("#navbar-wrapper").offset().top > 100) {
-      $("#navbar-wrapper").addClass("navbar-shrink");
-    } else {
-      $("#navbar-wrapper").removeClass("navbar-shrink");
-    }
-  };
-  // Collapse now if page is not at top
-  navbarCollapse();
-  // Collapse the navbar when page is scrolled
-  $(window).scroll(navbarCollapse);
-  
+
+    // Activate scrollspy to add active class to navbar items on scroll
+    $('body').scrollspy({
+        target: '#navbar-wrapper',
+        offset: 80
+    });
+
+    // Collapse Navbar
+    const navbarCollapse = () => {
+        if ($("#navbar-wrapper").offset().top > 100) {
+            $("#navbar-wrapper").addClass("navbar-shrink");
+        }
+        else {
+            $("#navbar-wrapper").removeClass("navbar-shrink");
+        }
+    };
+    // Collapse now if page is not at top
+    navbarCollapse();
+    // Collapse the navbar when page is scrolled
+    $(window).scroll(navbarCollapse);
+
 
     const $contactForm = $('#contact-form');
     $contactForm.submit(function(e) {

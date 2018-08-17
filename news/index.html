@@ -57,7 +57,18 @@
             <a class="js-scroll-trigger" href="/news">Новини</a>
           </li>
           <li class="navbar-nav-item">
-            <a class="js-scroll-trigger" href="/products">Продукти</a>
+            <div class="btn-group">
+              <a class="js-scroll-trigger" href="#products">Продукти</a>
+              <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                <a class="dropdown-item" href="/products/hair">Догляд за волоссям</a>
+                <a class="dropdown-item" href="/products/skin">Догляд за шкірою</a>
+                <a class="dropdown-item" href="/products/soaps">Мило з нуля</a>
+                <a class="dropdown-item" href="/products/kids">Дитяча серія</a>
+              </div>
+            </div>
           </li>
           <li class="navbar-nav-item">
             <a class="js-scroll-trigger" href="/contact">Контакти</a>
@@ -85,11 +96,11 @@
         <h2 class="mb-5">Новини</h2>
       </div>
       <div class="row mb-5">
-        <article class="col-12 text-justify lead">
+        <article id="silk" class="col-12 text-justify lead">
           <header>
             <h2 class="text-uppercase text-center">Надзвичайні властивості шовку</h2>
           </header>
-           <img class="img-thumbnail rounded float-left" src="../img/silk.jpg" alt="Шовк" />
+           <img class="img-thumbnail rounded float-right" src="../img/silk.jpg" alt="Шовк" />
           <p class="text-justify lead">Здавна було помічено, що працівниці шовкових фабрик володіють надзвичайно гладкою в м’якою шкірою рук. А древні китаянки витирали волосся шовковими рушниками. Вже значно пізніше після численних досліджень, було виявлено особливі властивості
             протеїнів шовку пом’якшувати шкіру і відновлювати структуру волосся.</p>
           <p>У спрощеному розумінні гіалуронова кислота – це цукор, але з великою молекулярною масою, завдяки якій одна молекула ГК може притягнути і зв’язати тисячу молекул води. У нашому тілі гіалуронова кислота виконує вкрай важливе завдання: зберегти
@@ -98,7 +109,7 @@
       </div>
       
       <div class="row mb-5">
-        <article class="col-12 text-justify lead">
+        <article id="hialuronic-acid" class="col-12 text-justify lead">
           <header>
             <h2 class="text-uppercase text-center">Гіалуронова кислота</h2>
           </header>
@@ -153,7 +164,7 @@
       <nav>
         <ul class="nav d-flex justify-content-center">
           <li class="navbar-nav-item">
-            <a class="js-scroll-trigger text-white" href="/new">Новини</a>
+            <a class="js-scroll-trigger text-white" href="/news">Новини</a>
           </li>
           <li class="navbar-nav-item">
             <a class="js-scroll-trigger text-white" href="/products">Продукти</a>

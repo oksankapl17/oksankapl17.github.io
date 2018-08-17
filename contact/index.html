@@ -28,8 +28,10 @@
   <meta name="theme-color" content="#ffffff">
 
   <!-- Bootstrap Core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- animated.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <!-- Custom Fonts -->
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 
@@ -41,137 +43,172 @@
 
 <body id="page-top">
 
-  <!-- Navigation -->
-  <nav id="navbar-wrapper" class="navbar navbar-expand-lg fixed-top navbar-light bg-light justify-content-between">
-    <div class="container">
-      <a class="navbar-brand" href="/"><img src="../img/logo.png" alt="Лого"/></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<!-- Navigation -->
+<nav id="navbar-wrapper" class="navbar navbar-expand-lg fixed-top navbar-light bg-light justify-content-between">
+  <div class="container">
+    <a class="navbar-brand" href="/"><img src="../img/logo.png" alt="Лого"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-      <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="navbar-nav-item">
-            <a class="js-scroll-trigger" href="/">Головна</a>
-          </li>
-          <li class="navbar-nav-item">
-            <a class="js-scroll-trigger" href="/news">Новини</a>
-          </li>
-          <li class="navbar-nav-item">
-            <a class="js-scroll-trigger" href="/products">Продукти</a>
-          </li>
-          <li class="navbar-nav-item">
-            <a class="js-scroll-trigger" href="/contact">Контакти</a>
-          </li>
-        </ul>
-      </div>
+    <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="navbar-nav-item">
+          <a class="js-scroll-trigger" href="/">Головна</a>
+        </li>
+        <li class="navbar-nav-item">
+          <a class="js-scroll-trigger" href="/news">Новини</a>
+        </li>
+        <li class="navbar-nav-item">
+          <div class="btn-group">
+            <a class="js-scroll-trigger" href="#products">Продукти</a>
+            <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+              <a class="dropdown-item" href="/products/hair">Догляд за волоссям</a>
+              <a class="dropdown-item" href="/products/skin">Догляд за шкірою</a>
+              <a class="dropdown-item" href="/products/soaps">Мило з нуля</a>
+              <a class="dropdown-item" href="/products/kids">Дитяча серія</a>
+            </div>
+          </div>
+        </li>
+        <li class="navbar-nav-item">
+          <a class="js-scroll-trigger" href="/contact">Контакти</a>
+        </li>
+      </ul>
     </div>
-  </nav>
-  <!-- Header -->
-  <header class="header contact small d-flex flex-column justify-content-center">
-    <div class="container">
-      <div class="d-flex flex-column justify-content-center align-items-center text-wrapper text-center my-auto">
-        <h1 class="mb-1">Крапля Краси</h1>
-        <h3 class="mb-1">
-          <em>Краса та здоров'я в кожній краплі</em>
-        </h3>
-      </div>
+  </div>
+</nav>
+<!-- Header -->
+<header class="header contact small d-flex flex-column justify-content-center">
+  <div class="container">
+    <div class="d-flex flex-column justify-content-center align-items-center text-wrapper text-center my-auto">
+      <h1 class="mb-1">Крапля Краси</h1>
+      <h3 class="mb-1">
+        <em>Краса та здоров'я в кожній краплі</em>
+      </h3>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- About -->
-  <div class="content-section-small bg-light" id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <img class="img-thumbnail rounded float-left" src="../img/my-photo.jpg" alt="Моє фото" />
-          <p  class="text-justify">
-            Досить довго я користувалась кремами купленими в супермаркеті або косметичних магазинах, а останнім часом і в дрогеріях Польщі. Все сподівалась одержати ефект, заявлений виробниками на упаковках, але його ніяк не було. Мало того, багато грошей було потрачено
-            на підбір косметики саме для своєї шкіри, а результату далі не було видно. Тоді я почала дуже скрупульозно вивчати з чого ж складаються ці самі косметичні засоби. Оскільки за освітою я хімік-фармацевт, то для мене це було дуже цікавим заняттям.
-            І виявилось, що косметика, яку ми купуємо, містить в собі синтетичні компоненти, а натуральних компонентів в найкращому випадку там мізерна кількість, тому що вони мають короткий термін зберігання і коштують зовсім не дешево. Досить того,
-            що ми харчуємось далеко не натуральною їжею, дихаємо забрудненим повітрям, то ще й користуємось невідомо наскільки безпечною косметикою. Тому я вирішила робити натуральну косметику своїми руками. Спочатку це було тільки для себе та сім’ї,
-            потім - для друзів. Оскільки ця косметика майже на 100% складається з натуральних складників, термін ії зберігання біля 3 місяців. Креми не такі гладенькі як промислові, оскільки не містять силіконів. При нанесенні залишається білий слід,
-            що швидко зникає. І ще в цій косметиці відсутній миттєвий ефект, проте при постійному використанні відразу буде помітно довготривалий накопичувальний ефект. Для мене дуже важливою є ефективність та безпечність косметичних засобів. Тому в натуральній
-            косметиці, що я виготовляю містяться: рослинні олії - замість вазеліну, мінеральних олій і силікону; рослинні екстракти і натуральні вітаміни - замість синтетичних вітамінів і антиоксидантів; натуральні гелеутворювачі (ксантанова камідь, гіалуронова
-            кислота) - замість синтетичних згущувачів; натуральні емульгатори (Olivem 1000 та ін.) - замість синтетичних емульгаторів натуральні ароматичні композиції або ефірні олії, активи, глини, порошки рослин і т.д.</p>
-          <h5 class="text-right">З повагою, Оксана Плотнікова</h5>
-        </div>
+<!-- About -->
+<div id="about" class="content-section-small bg-light wow fadeIn" data-wow-duration="1s" data-wow-offset="100">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <img class="img-thumbnail rounded float-left" src="../img/my-photo.jpg" alt="Моє фото"/>
+        <p class="text-justify">
+          Досить довго я користувалась кремами купленими в супермаркеті або косметичних магазинах, а останнім часом і в
+          дрогеріях Польщі. Все сподівалась одержати ефект, заявлений виробниками на упаковках, але його ніяк не було.
+          Мало того, багато грошей було потрачено
+          на підбір косметики саме для своєї шкіри, а результату далі не було видно. Тоді я почала дуже скрупульозно
+          вивчати з чого ж складаються ці самі косметичні засоби. Оскільки за освітою я хімік-фармацевт, то для мене це
+          було дуже
+          цікавим заняттям. І виявилось, що косметика, яку ми купуємо, містить в собі синтетичні компоненти, а
+          натуральних компонентів в найкращому випадку там мізерна кількість, тому що вони мають короткий термін
+          зберігання і коштують зовсім
+          не дешево. Досить того, що ми харчуємось далеко не натуральною їжею, дихаємо забрудненим повітрям, то ще й
+          користуємось невідомо наскільки безпечною косметикою. Тому я вирішила робити натуральну косметику своїми
+          руками. Спочатку
+          це було тільки для себе та сім’ї, потім - для друзів. Оскільки ця косметика майже на 100% складається з
+          натуральних складників, термін ії зберігання біля 3 місяців. Креми не такі гладенькі як промислові, оскільки
+          не містять силіконів.
+          При нанесенні залишається білий слід, що швидко зникає. І ще в цій косметиці відсутній миттєвий ефект, проте
+          при постійному використанні відразу буде помітно довготривалий накопичувальний ефект. Для мене дуже важливою є
+          ефективність
+          та безпечність косметичних засобів. Тому в натуральній косметиці, що я виготовляю містяться: рослинні олії -
+          замість вазеліну, мінеральних олій і силікону; рослинні екстракти і натуральні вітаміни - замість синтетичних
+          вітамінів
+          і антиоксидантів; натуральні гелеутворювачі (ксантанова камідь, гіалуронова кислота) - замість синтетичних
+          згущувачів; натуральні емульгатори (Olivem 1000 та ін.) - замість синтетичних емульгаторів натуральні
+          ароматичні композиції
+          або ефірні олії, активи, глини, порошки рослин і т.д.</p>
+        <h5 class="text-right">З повагою, Оксана Плотнікова</h5>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Contact -->
-  <section class="content-section-small bg-light">
-    <div class="container text-center">
-      <div class="content-section-heading text-center">
-        <h2 class="mb-5">Контакти</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <ul class="list-inline mb-5">
-            <li class="list-inline-item">
-              <a class="facebook social-link rounded-circle text-white mr-3" href="https://www.facebook.com/kraplya.krasy/">
-            </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="instagram social-link rounded-circle text-white mr-3" href="https://www.instagram.com/oksana.plotnikovazakanych/?hl=uk">
-            </a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-6">
-          <form id="contact-form" method="POST" action="https://formspree.io/oksankapl17@gmail.com">
-            <div class="form-group">
-              <label for="name">Введіть своє ім'я: </label>
-              <input id="name" class="form-control" type="text" name="name" placeholder="Ім'я Прізвище" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Введіть свою пошту: </label>
-              <input id="email" class="form-control" type="email" name="email" placeholder="yourmail@gmail.com" required>
-            </div>
-            <div class="form-group">
-              <label for="question">Введіть текст:</label>
-              <textarea id="question" class="form-control" name="message" rows="5" placeholder="Введіть своє запитання..."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-xl">Надіслати</button>
-          </form>
-        </div>
-      </div>
+<!-- Contact -->
+<section class="content-section-small bg-light">
+  <div class="container text-center wow fadeIn" data-wow-duration="1s" data-wow-offset="100">
+    <div class="content-section-heading text-center">
+      <h2 class="mb-5">Контакти</h2>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer text-center bg-primary">
-    <div class="container">
-      <nav>
-        <ul class="nav d-flex justify-content-center">
-          <li class="navbar-nav-item">
-            <a class="js-scroll-trigger text-white" href="/new">Новини</a>
+    <div class="row">
+      <div class="col-lg-6">
+        <ul class="list-inline mb-5 wow slideInLeft" data-wow-duration="1s" data-wow-offset="100">
+          <li class="list-inline-item">
+            <a class="facebook social-link rounded-circle text-white mr-3"
+               href="https://www.facebook.com/kraplya.krasy/" target="_blank">
+            </a>
           </li>
-          <li class="navbar-nav-item">
-            <a class="js-scroll-trigger text-white" href="/products">Продукти</a>
-          </li>
-          <li class="navbar-nav-item">
-            <a class="js-scroll-trigger text-white" href="/contact">Контакти</a>
+          <li class="list-inline-item">
+            <a class="instagram social-link rounded-circle text-white mr-3"
+               href="https://www.instagram.com/oksana.plotnikovazakanych/?hl=uk" target="_blank">
+            </a>
           </li>
         </ul>
-      </nav>
-
-      <p class="small mb-0 text-white">Copyright &copy; Kraplya Krasy 2018</p>
+      </div>
+      <div class="col-lg-6">
+        <form method="POST" action="https://formspree.io/oksankapl17@gmail.com" class="wow slideInRight"
+              data-wow-duration="1s" data-wow-offset="100">
+          <div class="form-group">
+            <label for="name">Введіть своє ім'я: </label>
+            <input id="name" class="form-control" type="text" name="name" placeholder="Ім'я Прізвище" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Введіть свою пошту: </label>
+            <input id="email" class="form-control" type="email" name="email" placeholder="yourmail@gmail.com" required>
+          </div>
+          <div class="form-group">
+            <label for="question">Введіть текст:</label>
+            <textarea id="question" class="form-control" name="message" rows="5"
+                      placeholder="Введіть своє запитання..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-xl">Надіслати</button>
+        </form>
+      </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- Scroll to Top Button-->
-  <a class="js-scroll-trigger scroll-to-top rounded" href="#page-top">
+<!-- Footer -->
+<footer class="footer text-center bg-primary">
+  <div class="container">
+    <nav>
+      <ul class="nav d-flex justify-content-center">
+        <li class="navbar-nav-item">
+          <a class="js-scroll-trigger text-white" href="/news">Новини</a>
+        </li>
+        <li class="navbar-nav-item">
+          <a class="js-scroll-trigger text-white" href="/products">Продукти</a>
+        </li>
+        <li class="navbar-nav-item">
+          <a class="js-scroll-trigger text-white" href="/contact">Контакти</a>
+        </li>
+      </ul>
+    </nav>
+
+    <p class="small mb-0 text-white">Copyright &copy; Kraplya Krasy 2018</p>
+  </div>
+</footer>
+
+<!-- Scroll to Top Button-->
+<a class="js-scroll-trigger scroll-to-top rounded" href="#page-top">
   &uarr;
 </a>
 
-  <!-- JavaScript -->
-  <script src="../js/vendor/jquery.min.js"></script>
-  <script src="../js/vendor/bootstrap.bundle.min.js"></script>
-  <script src="../js/vendor/jquery.easing.js"></script>
+<!-- JavaScript -->
+<script src="../js/vendor/jquery.min.js"></script>
+<script src="../js/vendor/bootstrap.bundle.min.js"></script>
+<script src="../js/vendor/jquery.easing.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js "></script>
 
-  <!-- Custom scripts -->
-  <script src="../js/main.js"></script>
+<!-- Custom scripts -->
+<script src="../js/main.js"></script>
 
 </body>
 
