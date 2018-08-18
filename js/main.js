@@ -3,6 +3,19 @@
     if (typeof WOW !== "undefined") {
         new WOW().init();
     }
+
+    // Set active nav item according to location
+    const pathname = window.location.pathname;
+    const navpath = pathname.length > 1 ? pathname.slice(0, -1) : pathname;
+    let parentLink = navpath.split("/");
+    if (parentLink.length) {
+        parentLink = "/" + parentLink[1]
+    }
+    $('#navbar-wrapper #navbarNav .js-scroll-trigger[href="' + navpath + '"]').parent().addClass('active');
+    $('#navbar-wrapper #navbarNav .js-scroll-trigger[href="' + parentLink + '"]').parent().addClass('active');
+    $('#navbar-wrapper #navbarNav .dropdown-menu a[href="' + navpath + '"]').addClass('active');
+
+
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
@@ -48,9 +61,8 @@
     navbarCollapse();
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
-   
+
     // Expand product
-    
     $(".product-footer .expand-product").on("click", (event) => {
         $(event.target).parent().prev().toggleClass("expanded");
     });
@@ -62,21 +74,22 @@
         const data = $(this).serializeArray();
         $.post('https://formspree.io/oksankapl17@gmail.com', { name: data[0].value, email: data[1].value, question: data[1].value })
             .done(() => {
-                $contactForm.prepend('<div class="alert alert-success alert-dismissible">Message sent!<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+                $contactForm.prepend('<div class="alert alert-success alert-dismissible">Повідомлення надіслано!<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
                 $submit.val('Message sent!');
                 setTimeout(function() {
                     $contactForm.find('.alert').remove();
                     $submit.attr('disabled', false).val(defaultSubmitText);
-                }, 5000);
+                    $('#contactModal').modal('hide');
+                }, 3000);
             })
             .fail(() => {
                 $contactForm.find('.alert').remove();
-                $contactForm.prepend('<div class="alert alert-danger alert-dismissible">Ops, there was an error.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+                $contactForm.prepend('<div class="alert alert-danger alert-dismissible"Ой, щось пішло не так :(<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
                 $submit.val('Ops, there was an error.');
                 setTimeout(function() {
                     $('.alert').remove();
                     $submit.attr('disabled', false).val(defaultSubmitText);
-                }, 5000);
+                }, 3000);
             })
     });
 })(jQuery);

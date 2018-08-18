@@ -209,7 +209,6 @@ h6 {
     }
 }
 
-
 #navbar-wrapper #navbarNav .navbar-nav li.navbar-nav-item a {
     text-decoration: none;
     color: #000;
@@ -227,6 +226,14 @@ h6 {
 #navbar-wrapper #navbarNav .navbar-nav li.navbar-nav-item a:focus {
     text-decoration: none;
 }
+#navbar-wrapper #navbarNav .navbar-nav li.navbar-nav-item.active a, #navbar-wrapper #navbarNav .navbar-nav .btn-group.active > a{
+    color: #1D809F;
+}
+#navbar-wrapper #navbarNav .navbar-nav li.navbar-nav-item a.active {
+   color: #1D809F;
+   background-color: transparent;
+}
+
 
 .navbar-nav>.navbar-brand {
     font-size: 1.2rem;
