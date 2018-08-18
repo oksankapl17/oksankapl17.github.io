@@ -361,6 +361,25 @@ h6 {
     }
 }
 
+#products-decription .details {
+    max-height: 100px;
+    overflow: hidden;
+    margin-bottom: 1em;
+    transition: all 0.3s ease-out;
+}
+
+#products-decription .details.expanded {
+    height: auto;
+    max-height: 700px;
+    overflow: initial;
+    transition: all 0.3s ease-in;
+}
+
+#products-decription .details p {
+    margin-bottom: 0;
+}
+
+
 footer.footer {
     padding-top: 3rem;
     padding-bottom: 3rem;

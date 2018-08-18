@@ -48,8 +48,12 @@
     navbarCollapse();
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
-
-
+   
+    // Expand product
+    
+    $(".product-footer .expand-product").on("click", (event) => {
+        $(event.target).parent().prev().toggleClass("expanded");
+    });
     const $contactForm = $('#contact-form');
     $contactForm.submit(function(e) {
         e.preventDefault();
