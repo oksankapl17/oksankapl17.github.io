@@ -96,6 +96,10 @@ h6 {
 }
 
 .header.products {
+    background-image: url('../img/products-banner.jpg');
+    position: relative;
+}
+.header.products.soaps {
     background-image: url('../img/soaps.jpg');
     position: relative;
 }
@@ -110,6 +114,10 @@ h6 {
     position: relative;
 }
 
+.header.products.kids {
+    background-image: url('../img/kids-care.jpg');
+    position: relative;
+}
 
 .header.products:after {
     content: "";
