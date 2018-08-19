@@ -44,13 +44,12 @@
 
     // Activate scrollspy to add active class to navbar items on scroll
     $('body').scrollspy({
-        target: '#navbar-wrapper',
-        offset: 80
+        target: '#navbar-wrapper'
     });
 
     // Collapse Navbar
     const navbarCollapse = () => {
-        if ($("#navbar-wrapper").offset().top > 100) {
+        if ($("#navbar-wrapper").offset().top > 90) {
             $("#navbar-wrapper").addClass("navbar-shrink");
         }
         else {
