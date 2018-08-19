@@ -63,6 +63,7 @@
 
     // Expand product
     $(".product-footer .expand-product").on("click", (event) => {
+        console.log(event)
         $(event.target).parent().prev().toggleClass("expanded");
         setTimeout(() => {
              $(event.target).parent().prev().toggleClass("overflow")
