@@ -65,30 +65,35 @@
     // Expand product
     $(".product-footer .expand-product").on("click", (event) => {
         $(event.target).parent().prev().toggleClass("expanded");
+        setTimeout(() => {
+             $(event.target).parent().prev().toggleClass("overflow")
+        }, 300)
     });
+    
+    
     const $contactForm = $('#contact-form');
     $contactForm.submit(function(e) {
         e.preventDefault();
         const $submit = $('.btn-primary', $contactForm);
-        const defaultSubmitText = $submit.val();
+        const defaultSubmitText = $submit.text();
         const data = $(this).serializeArray();
         $.post('https://formspree.io/oksankapl17@gmail.com', { name: data[0].value, email: data[1].value, question: data[1].value })
             .done(() => {
                 $contactForm.prepend('<div class="alert alert-success alert-dismissible">Повідомлення надіслано!<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
-                $submit.val('Message sent!');
+                $submit.text('Повідомлення надіслано!');
                 setTimeout(function() {
                     $contactForm.find('.alert').remove();
-                    $submit.attr('disabled', false).val(defaultSubmitText);
+                    $submit.attr('disabled', false).text(defaultSubmitText);
                     $('#contactModal').modal('hide');
                 }, 3000);
             })
             .fail(() => {
                 $contactForm.find('.alert').remove();
                 $contactForm.prepend('<div class="alert alert-danger alert-dismissible"Ой, щось пішло не так :(<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
-                $submit.val('Ops, there was an error.');
+                $submit.text('Помилка');
                 setTimeout(function() {
                     $('.alert').remove();
-                    $submit.attr('disabled', false).val(defaultSubmitText);
+                    $submit.attr('disabled', false).text(defaultSubmitText);
                 }, 3000);
             })
     });

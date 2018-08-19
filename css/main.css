@@ -100,6 +100,17 @@ h6 {
     position: relative;
 }
 
+.header.products.hair {
+    background-image: url('../img/banner-hair.jpg');
+    position: relative;
+}
+
+.header.products.skin {
+    background-image: url('../img/skin-banner.jpg');
+    position: relative;
+}
+
+
 .header.products:after {
     content: "";
     display: block;
@@ -378,8 +389,18 @@ h6 {
 #products-decription .details.expanded {
     height: auto;
     max-height: 700px;
-    overflow: initial;
     transition: all 0.3s ease-in;
+}
+#products-decription .details.expanded.overflow {
+    overflow: initial;
+}
+.zoom-img {
+    width: 100%;
+    display: block;
+}
+
+.zoom-img img {
+    width: 100%;
 }
 
 #products-decription .details p {
