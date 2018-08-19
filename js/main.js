@@ -17,10 +17,10 @@
 
 
     // Smooth scrolling using jQuery easing
-    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-            let target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').on("click", (ev) => {
+        if (location.pathname.replace(/^\//, '') === ev.target.pathname.replace(/^\//, '') && location.hostname ===  ev.target.hostname) {
+            let target = $(ev.target.hash);
+            target = target.length ? target : $('[name=' +  ev.target.hash.slice(1) + ']');
             if (target.length) {
                 $('html, body').animate({
                     scrollTop: target.offset().top - 50,
@@ -39,12 +39,6 @@
         else {
             $('.scroll-to-top').fadeOut();
         }
-    });
-
-
-    // Activate scrollspy to add active class to navbar items on scroll
-    $('body').scrollspy({
-        target: '#navbar-wrapper'
     });
 
     // Collapse Navbar
@@ -81,17 +75,15 @@
             .done(() => {
                 $contactForm.prepend('<div class="alert alert-success alert-dismissible">Повідомлення надіслано!<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
                 $submit.text('Повідомлення надіслано!');
-                setTimeout(function() {
-                    $contactForm.find('.alert').remove();
-                    $submit.attr('disabled', false).text(defaultSubmitText);
-                    $('#contactModal').modal('hide');
+                setTimeout(() => {
+                   e
                 }, 3000);
             })
             .fail(() => {
                 $contactForm.find('.alert').remove();
                 $contactForm.prepend('<div class="alert alert-danger alert-dismissible"Ой, щось пішло не так :(<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
                 $submit.text('Помилка');
-                setTimeout(function() {
+                setTimeout(() => {
                     $('.alert').remove();
                     $submit.attr('disabled', false).text(defaultSubmitText);
                 }, 3000);
