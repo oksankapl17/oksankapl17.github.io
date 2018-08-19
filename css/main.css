@@ -160,6 +160,13 @@ h6 {
     bottom: 15%;
 }
 
+@media (max-width: 576px) {
+   .carousel-caption {
+     right: 0;
+     left: 0;
+   }
+}
+
 .carousel-item img {
     object-position: center;
     object-fit: cover;
